@@ -13,6 +13,7 @@ import { routing } from "./app.routing";
 import { LogoutComponent } from "./auth/logout/logout.component";
 import { SigninComponent } from "./auth/signin/signin.component";
 import { SignupComponent } from "./auth/signup/signup.component";
+import {HttpModule} from "@angular/http";
 
 @NgModule({
     declarations: [
@@ -27,7 +28,13 @@ import { SignupComponent } from "./auth/signup/signup.component";
         SigninComponent,
         SignupComponent
     ],
-    imports: [BrowserModule, FormsModule, routing, ReactiveFormsModule],
+    imports: [
+        BrowserModule,
+        FormsModule,
+        routing,
+        ReactiveFormsModule,
+        HttpModule
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {

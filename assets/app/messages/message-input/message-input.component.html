@@ -6,10 +6,16 @@
                 type="text"
                 id="content"
                 class="form-control"
-                ngModel
+                [ngModel]="message?.content"
                 name="content"
                 required>
         </div>
+        <button
+                type="button"
+                class="btn btn-danger"
+                (click)="onClear(messageForm)">
+            Clear
+        </button>
         <button
             class="btn btn-primary"
             type="submit"
